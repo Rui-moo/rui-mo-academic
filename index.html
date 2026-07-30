@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rui Mo 莫锐 | Biomaterials & Biosensor Researcher</title>
+  <meta name="description" content="Rui Mo's bilingual academic website - electrochemical biosensors, functional hydrogel coatings, bio-interfaces, nanoscale molecular transport, and sustainable materials.">
+  <meta property="og:title" content="Rui Mo · 莫锐">
+  <meta property="og:description" content="Biomaterials & Electrochemical Biosensor Researcher">
+  <meta property="og:image" content="https://rui-moo.github.io/rui-mo-academic/og-rui-mo-minimal.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rui-moo.github.io/rui-mo-academic/">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    :root{--navy:#102a4c;--navy2:#234568;--text:#172234;--muted:#627085;--paper:#f5f7fa;--line:#dce3eb;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:var(--white);font-family:Arial,"Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}
+    .header{width:min(1140px,calc(100% - 48px));height:76px;margin:auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid var(--line)}
+    .brand{font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--navy)}.brand i{font-style:normal;margin:0 9px;color:#9aa7b8;font-weight:400}
+    nav{display:flex;gap:34px;color:var(--muted);font-size:13px}nav a:hover{color:var(--navy)}
+    .lang{justify-self:end;display:flex;gap:7px;padding:7px 10px;border:1px solid var(--line);border-radius:4px;background:#fff;color:#98a3b2;cursor:pointer;font:inherit;font-size:11px}.lang b{color:var(--navy)}
+    .hero{width:min(1140px,calc(100% - 48px));min-height:610px;margin:auto;padding:90px 0 76px;display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:86px;position:relative;border-bottom:1px solid var(--line)}
+    .kicker{margin:0 0 23px;color:var(--navy);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    h1{margin:0;max-width:790px;color:var(--navy);font-size:clamp(48px,5.4vw,78px);line-height:1.08;letter-spacing:-.045em;font-weight:600}h1 span{display:block}.soft{color:var(--navy2)}
+    .intro{max-width:710px;margin:31px 0 0;color:var(--muted);font-size:16px;line-height:1.85}.actions{display:flex;align-items:center;gap:25px;margin-top:33px;flex-wrap:wrap}
+    .primary{display:inline-flex;gap:26px;padding:13px 17px;border-radius:3px;background:var(--navy);color:#fff;font-size:13px;font-weight:600}.link{padding-bottom:3px;border-bottom:1px solid #aab5c3;color:var(--navy);font-size:13px}
+    .portrait{align-self:center;aspect-ratio:4/5;max-height:390px;position:relative;overflow:hidden;display:grid;place-items:center;border:1px solid var(--line);background:var(--paper)}
+    .mark{width:118px;height:118px;border:1px solid var(--navy);border-radius:50%;display:grid;place-items:center;position:relative;z-index:2;background:#fff;color:var(--navy);font-family:monospace;font-size:28px;letter-spacing:.04em}
+    .orbit{position:absolute;border:1px solid #ccd5df;border-radius:50%}.o1{width:270px;height:270px}.o2{width:330px;height:150px;transform:rotate(38deg)}.portrait small{position:absolute;bottom:18px;color:var(--muted);font-size:9px;letter-spacing:.06em;text-transform:uppercase}
+    .meta{position:absolute;left:0;bottom:18px;display:flex;gap:18px;color:#8491a2;font-size:9px;letter-spacing:.07em;text-transform:uppercase}.meta span+span:before{content:"·";margin-right:18px}
+    .section{width:min(1140px,calc(100% - 48px));margin:auto;padding:94px 0;display:grid;grid-template-columns:145px minmax(0,1fr);gap:54px;border-bottom:1px solid var(--line)}
+    .label{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.label b{margin-right:13px;color:var(--navy)}
+    .section-head{display:grid;grid-template-columns:1.45fr 1fr;gap:64px;align-items:end;margin-bottom:48px}.section-head h2{margin:0;color:var(--navy);font-size:clamp(32px,3.5vw,48px);line-height:1.2;letter-spacing:-.035em;font-weight:550}.section-head p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}
+    .research{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{min-height:280px;padding:24px 22px;border:1px solid var(--line);border-top:3px solid var(--navy);display:flex;flex-direction:column}
+    .card em{width:28px;height:28px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--navy);font-size:10px;font-style:normal}.card h3{margin:33px 0 14px;color:var(--navy);font-size:19px;line-height:1.35}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.75}.card small{margin-top:auto;padding-top:23px;color:#8090a3;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .pub-section{width:100%;padding-inline:max(24px,calc((100% - 1140px)/2));background:var(--paper)}.pub-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}.pub-title h2{margin:0;color:var(--navy);font-size:clamp(32px,3.5vw,46px);font-weight:550}.pub-title a{padding-bottom:3px;border-bottom:1px solid #9cabbc;color:var(--navy);font-size:12px}
+    .pub{display:grid;grid-template-columns:58px minmax(0,1fr) 32px;gap:24px;padding:27px 0;border-top:1px solid var(--line)}.pub:last-child{border-bottom:1px solid var(--line)}.year{padding-top:4px;color:var(--navy);font-size:11px;font-weight:700}.journal{display:inline-block;padding:4px 7px;border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--navy);font-size:9px;font-weight:700}.pub h3{max-width:790px;margin:12px 0 10px;font-size:clamp(18px,1.8vw,23px);line-height:1.4;font-weight:500}.authors{margin:0;color:var(--muted);font-size:11px;line-height:1.5}.volume{margin:5px 0 0;color:var(--navy);font-size:11px}.go{width:32px;height:32px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;color:var(--navy)}
+    .patents{margin-top:48px}.patents h3{margin:0 0 14px;color:var(--navy);font-size:13px;letter-spacing:.08em;text-transform:uppercase}.patent{display:grid;grid-template-columns:155px 1fr;gap:24px;padding:16px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px;line-height:1.6}.patent:last-child{border-bottom:1px solid var(--line)}.patent b{color:var(--navy);font-family:monospace}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:76px}.two-col h2{margin:0 0 29px;color:var(--navy);font-size:25px}.timeline{border-top:1px solid var(--line)}.item{display:grid;grid-template-columns:92px 1fr;column-gap:18px;padding:21px 0;border-bottom:1px solid var(--line)}.item time{grid-row:1/3;color:var(--navy);font-size:10px;font-weight:700}.item h3{margin:0;font-size:15px;line-height:1.45}.item p{margin:7px 0 0;color:var(--muted);font-size:12px;line-height:1.55}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.skill{min-height:205px;padding:23px;border:1px solid var(--line)}.skill h3{margin:0 0 29px;color:var(--navy);font-size:17px}.skill p{margin:0;color:var(--muted);font-size:13px;line-height:1.8}
+    .honors{margin-top:58px;display:grid;grid-template-columns:180px 1fr;gap:40px}.honors h3{margin:0;color:var(--navy);font-size:24px}.honors ul{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}.honors li{display:grid;grid-template-columns:95px 1fr;gap:18px;padding:16px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:13px}.honors time{color:var(--navy);font-size:10px;font-weight:700}
+    footer{padding:74px max(24px,calc((100% - 1140px)/2)) 24px;background:var(--navy);color:#fff}.cta{display:flex;align-items:flex-end;justify-content:space-between;gap:44px;padding-bottom:70px}.cta p{max-width:730px;margin:0;font-size:clamp(34px,4.3vw,58px);line-height:1.15;letter-spacing:-.04em}.cta a{padding:13px 16px;border:1px solid rgba(255,255,255,.55);border-radius:3px;font-size:13px}.foot{padding-top:20px;border-top:1px solid rgba(255,255,255,.22);display:grid;grid-template-columns:1fr auto 1fr;color:#c8d2df;font-size:10px}.foot p{margin:0}.foot div{display:flex;gap:22px}.foot>a{justify-self:end}
+    @media(max-width:900px){.header{grid-template-columns:1fr auto}.header nav{display:none}.hero{grid-template-columns:1fr 230px;gap:44px;min-height:560px;padding-top:70px}.section{grid-template-columns:105px minmax(0,1fr);gap:32px}.section-head{grid-template-columns:1fr;gap:22px}.research,.skills{grid-template-columns:1fr}.card,.skill{min-height:auto}.two-col{grid-template-columns:1fr;gap:56px}}
+    @media(max-width:660px){.header,.hero,.section{width:calc(100% - 30px)}.header{height:66px}.hero{display:block;min-height:auto;padding:54px 0 45px}h1{font-size:clamp(43px,13vw,62px)}.intro{font-size:15px}.portrait{max-width:280px;margin:43px auto 0}.meta{position:static;margin-top:22px;flex-direction:column;gap:6px}.meta span+span:before{display:none}.section{display:block;padding:68px 0}.label{margin-bottom:37px}.pub-section{width:100%;padding-inline:15px}.pub{grid-template-columns:42px minmax(0,1fr);gap:12px}.go{display:none}.pub h3{font-size:17px}.patent{grid-template-columns:1fr;gap:6px}.honors{grid-template-columns:1fr;gap:24px}.cta{display:block;padding-bottom:54px}.cta a{display:inline-block;margin-top:29px}.foot{grid-template-columns:1fr auto;gap:15px}.foot div{display:none}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#top">莫锐<i>/</i>R. MO</a>
+    <nav>
+      <a href="#research" data-zh="研究" data-en="Research">研究</a>
+      <a href="#publications" data-zh="论文" data-en="Publications">论文</a>
+      <a href="#experience" data-zh="经历" data-en="Experience">经历</a>
+      <a href="#skills" data-zh="技能与荣誉" data-en="Skills & Honors">技能与荣誉</a>
+    </nav>
+    <button class="lang" type="button" aria-label="Switch language"><b id="zhLabel">中</b><span>/</span><span id="enLabel">EN</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div>
+        <p class="kicker" data-zh="生物材料与电化学生物传感研究者" data-en="Biomaterials & Electrochemical Biosensor Researcher">生物材料与电化学生物传感研究者</p>
+        <h1>
+          <span data-zh="研究分子如何" data-en="I study molecular">研究分子如何</span>
+          <span data-zh="穿过界面，" data-en="transport across">穿过界面，</span>
+          <span class="soft" data-zh="让生物传感更可靠。" data-en="interfaces—so biosensing works better.">让生物传感更可靠。</span>
+        </h1>
+        <p class="intro" data-zh="我的研究聚焦电化学生物传感器、功能水凝胶涂层与生物界面，同时探索纳米尺度分子传输和可持续功能材料。目前在 MIT 与 Broad Institute 开展植入式生物传感器硕士论文研究。" data-en="My research spans electrochemical biosensors, functional hydrogel coatings, and bio-interfaces, with broader interests in nanoscale molecular transport and sustainable functional materials. I am currently conducting my master’s thesis research on implantable biosensors at MIT and the Broad Institute.">我的研究聚焦电化学生物传感器、功能水凝胶涂层与生物界面，同时探索纳米尺度分子传输和可持续功能材料。目前在 MIT 与 Broad Institute 开展植入式生物传感器硕士论文研究。</p>
+        <div class="actions">
+          <a class="primary" href="#publications"><span data-zh="查看论文" data-en="View publications">查看论文</span><span>↓</span></a>
+          <a class="link" href="./CV_Rui_Mo_2026.pdf" download><span data-zh="下载 CV" data-en="Download CV">下载 CV</span> ↓</a>
+          <a class="link" href="mailto:rui.mo@tum.de"><span data-zh="联系我" data-en="Contact">联系我</span> ↗</a>
+        </div>
+      </div>
+      <div class="portrait" aria-label="Rui Mo monogram">
+        <div class="orbit o1"></div><div class="orbit o2"></div><div class="mark">RM</div>
+        <small data-zh="现工作于慕尼黑与剑桥" data-en="Currently between Munich & Cambridge">现工作于慕尼黑与剑桥</small>
+      </div>
+      <div class="meta"><span>Thesis @ MIT & Broad Institute</span><span>MSc @ TUM</span><span>Biosensors · Hydrogels · Biointerfaces</span></div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="label"><b>01</b><span data-zh="研究方向" data-en="Research">研究方向</span></div>
+      <div>
+        <div class="section-head">
+          <h2 data-zh="从分子传输到材料界面，构建更可靠、更可持续的功能系统。" data-en="From molecular transport to material interfaces—building functional systems that are reliable and sustainable.">从分子传输到材料界面，构建更可靠、更可持续的功能系统。</h2>
+          <p data-zh="我结合材料合成、电化学表征与分子模拟，研究材料结构、界面过程与宏观性能之间的关系。" data-en="I combine material synthesis, electrochemical characterization, and molecular simulation to understand the relationships between structure, interfacial processes, and macroscopic performance.">我结合材料合成、电化学表征与分子模拟，研究材料结构、界面过程与宏观性能之间的关系。</p>
+        </div>
+        <div class="research">
+          <article class="card"><em>A</em><h3 data-zh="植入式电化学生物传感" data-en="Implantable Electrochemical Biosensing">植入式电化学生物传感</h3><p data-zh="开发植入式金电极的水凝胶保护涂层，提升生物相容性、抗生物污染能力与长期信号稳定性。" data-en="Developing hydrogel protective coatings for implantable gold electrodes to improve biocompatibility, resist biofouling, and sustain long-term signal stability.">开发植入式金电极的水凝胶保护涂层，提升生物相容性、抗生物污染能力与长期信号稳定性。</p><small>CV · EIS · Aptamer sensors</small></article>
+          <article class="card"><em>B</em><h3 data-zh="功能水凝胶与生物界面" data-en="Functional Hydrogels & Bio-interfaces">功能水凝胶与生物界面</h3><p data-zh="通过调控涂层组成、厚度与界面黏附，控制分子扩散并理解生理相关条件下的传感响应。" data-en="Tuning coating composition, thickness, and interfacial adhesion to regulate molecular diffusion and understand sensing under physiologically relevant conditions.">通过调控涂层组成、厚度与界面黏附，控制分子扩散并理解生理相关条件下的传感响应。</p><small>Diffusion · Coatings · Biofouling</small></article>
+          <article class="card"><em>C</em><h3 data-zh="纳米膜与可持续功能材料" data-en="Nanomembranes & Sustainable Materials">纳米膜与可持续功能材料</h3><p data-zh="研究有序聚酰胺膜的离子选择性传输，以及黏土改性纤维素多孔泡沫的隔热与阻燃性能。" data-en="Studying selective ion transport in ordered polyamide membranes and clay-modified cellulose foams for thermal insulation and flame resistance.">研究有序聚酰胺膜的离子选择性传输，以及黏土改性纤维素多孔泡沫的隔热与阻燃性能。</p><small>Nanofiltration · Cellulose · MD</small></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pub-section" id="publications">
+      <div class="label"><b>02</b><span data-zh="论文与专利" data-en="Publications & Patents">论文与专利</span></div>
+      <div>
+        <div class="pub-title"><h2 data-zh="精选发表" data-en="Selected publications">精选发表</h2><a href="https://scholar.google.com/citations?user=wvKh4P8AAAAJ&hl=zh-CN" target="_blank" rel="noreferrer">Google Scholar ↗</a></div>
+        <article class="pub"><div class="year">2023</div><div><span class="journal">Nature Communications</span><h3>Polyamide membranes with nanoscale ordered structures for fast permeation and highly selective ion-ion separation</h3><p class="authors">Changwei Zhao*, Yanjun Zhang, Yuewen Jia, Bojun Li, Wenjing Tang, Chuning Shang, Rui Mo, Pei Li, Shaomin Liu & Sui Zhang*</p><p class="volume">14(1), 1112</p></div><a class="go" href="https://scholar.google.com/citations?user=wvKh4P8AAAAJ&hl=zh-CN">↗</a></article>
+        <article class="pub"><div class="year">2025</div><div><span class="journal">Desalination</span><h3>Enhanced boron rejection and permeability of thin-film nanocomposite membranes via g-C₃N₄-tuned diffusion and reaction</h3><p class="authors">Junliang Huang*, Boyuan Xuan, Yanwen Ma, Rui Mo, Jiekai Wang & Changwei Zhao*</p><p class="volume">118902</p></div><a class="go" href="https://scholar.google.com/citations?user=wvKh4P8AAAAJ&hl=zh-CN">↗</a></article>
+        <article class="pub"><div class="year">2025</div><div><span class="journal">Research article</span><h3>Interfacial construction of PIM-based interlayers in nanofiltration membranes for efficient saline wastewater treatment</h3><p class="authors">Wenjing Tang, Bojun Li, Boyuan Xuan, Shaomin Liu, Rui Mo, Sihan Shao, Yushuang Liang, Yanwen Wei & Changwei Zhao</p><p class="volume">2025</p></div><a class="go" href="https://scholar.google.com/citations?user=wvKh4P8AAAAJ&hl=zh-CN">↗</a></article>
+        <div class="patents">
+          <h3 data-zh="专利" data-en="Patents">专利</h3>
+          <div class="patent"><b>CN202211136638.9</b><span data-zh="一种高渗透性纳滤膜的制备方法" data-en="A preparation method of nanofiltration membrane with high permeability">一种高渗透性纳滤膜的制备方法</span></div>
+          <div class="patent"><b>CN202210306696.5</b><span data-zh="一种抗氧化、抗污染聚酯纳滤膜的制备方法" data-en="A preparation method of oxidation-resistant and pollution-resistant polyester nanofiltration membrane">一种抗氧化、抗污染聚酯纳滤膜的制备方法</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="label"><b>03</b><span data-zh="研究与教育经历" data-en="Research & Education">研究与教育经历</span></div>
+      <div class="two-col">
+        <div><h2 data-zh="研究经历" data-en="Research experience">研究经历</h2><div class="timeline">
+          <article class="item"><time>2026—</time><h3>Broad Institute of MIT and Harvard & MIT (L4TE)</h3><p data-zh="硕士论文研究员及实习生 · 导师：Giovanni Traverso 教授、Isaac Tucker 博士" data-en="Master’s Thesis Researcher & Intern · Supervisors: Prof. Giovanni Traverso and Dr. Isaac Tucker">硕士论文研究员及实习生 · 导师：Giovanni Traverso 教授、Isaac Tucker 博士</p></article>
+          <article class="item"><time>2025—2026</time><h3>Technical University of Munich</h3><p data-zh="实习生及研究助理 · 导师：Cordt Zollfrank 教授、Weixuan Wang 博士" data-en="Intern & Research Assistant · Supervisors: Prof. Cordt Zollfrank and Dr. Weixuan Wang">实习生及研究助理 · 导师：Cordt Zollfrank 教授、Weixuan Wang 博士</p></article>
+          <article class="item"><time>2021—2024</time><h3>China Agricultural University</h3><p data-zh="硕士研究员及研究助理 · 导师：赵长伟教授" data-en="Master’s Researcher & Research Assistant · Supervisor: Prof. Changwei Zhao">硕士研究员及研究助理 · 导师：赵长伟教授</p></article>
+          <article class="item"><time>2020—2021</time><h3>Changchun University of Technology</h3><p data-zh="本科研究 · 导师：杨旭东教授" data-en="Undergraduate Research · Supervisor: Prof. Xudong Yang">本科研究 · 导师：杨旭东教授</p></article>
+        </div></div>
+        <div><h2 data-zh="教育经历" data-en="Education">教育经历</h2><div class="timeline">
+          <article class="item"><time>2026—</time><h3>Massachusetts Institute of Technology</h3><p data-zh="访问学生 / 硕士论文研究员" data-en="Visiting Student / Master’s Thesis Researcher">访问学生 / 硕士论文研究员</p></article>
+          <article class="item"><time>2025—</time><h3>Technical University of Munich</h3><p data-zh="生物源资源技术理学硕士 · GPA 2.0/1.0" data-en="MSc, Technology of Biogenic Resources · GPA 2.0/1.0">生物源资源技术理学硕士 · GPA 2.0/1.0</p></article>
+          <article class="item"><time>2021—2023</time><h3>China Agricultural University</h3><p data-zh="资源与环境科学理学硕士 · GPA 3.59/4.00" data-en="MSc, Resources and Environmental Sciences · GPA 3.59/4.00">资源与环境科学理学硕士 · GPA 3.59/4.00</p></article>
+          <article class="item"><time>2017—2021</time><h3>Changchun University of Technology</h3><p data-zh="环境工程学士 · GPA 3.30/4.00" data-en="BEng, Environmental Engineering · GPA 3.30/4.00">环境工程学士 · GPA 3.30/4.00</p></article>
+        </div></div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="label"><b>04</b><span data-zh="技能与荣誉" data-en="Skills & Honors">技能与荣誉</span></div>
+      <div>
+        <div class="skills">
+          <article class="skill"><h3 data-zh="材料合成" data-en="Material synthesis">材料合成</h3><p data-zh="生物质纳米材料、二维纳米片（g-C₃N₄、MoS₂）、界面聚合、生物聚合物配方与水凝胶网络构建。" data-en="Biomass-derived nanomaterials, 2D nanosheets (g-C₃N₄, MoS₂), interfacial polymerization, biopolymer formulation, and hydrogel network construction.">生物质纳米材料、二维纳米片（g-C₃N₄、MoS₂）、界面聚合、生物聚合物配方与水凝胶网络构建。</p></article>
+          <article class="skill"><h3 data-zh="材料表征" data-en="Characterization">材料表征</h3><p>FT-IR · SEM · AFM · TEM · XPS · XRD · TGA</p></article>
+          <article class="skill"><h3 data-zh="电化学与模拟" data-en="Electrochemistry & simulation">电化学与模拟</h3><p data-zh="CV、EIS、生物界面传感分析；使用 Materials Studio 与 LAMMPS 开展分子动力学模拟。" data-en="CV, EIS, bio-interface sensing analysis, and molecular dynamics simulations using Materials Studio and LAMMPS.">CV、EIS、生物界面传感分析；使用 Materials Studio 与 LAMMPS 开展分子动力学模拟。</p></article>
+        </div>
+        <div class="honors"><h3 data-zh="荣誉奖项" data-en="Awards & honors">荣誉奖项</h3><ul>
+          <li><time>2023</time><span data-zh="NUS 苏州研究院暑期项目证书" data-en="NUS Suzhou Research Institute Summer Programme Certificate">NUS 苏州研究院暑期项目证书</span></li>
+          <li><time>2022</time><span data-zh="中国农业大学一等学业奖学金" data-en="First-Class Academic Scholarship, China Agricultural University">中国农业大学一等学业奖学金</span></li>
+          <li><time>2021</time><span data-zh="长春工业大学优秀毕业论文" data-en="Outstanding Graduation Thesis Award, Changchun University of Technology">长春工业大学优秀毕业论文</span></li>
+          <li><time>2019—2021</time><span data-zh="长春工业大学一等学业奖学金" data-en="First-Class Academic Scholarship, Changchun University of Technology">长春工业大学一等学业奖学金</span></li>
+        </ul></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="cta"><p data-zh="对生物传感、材料界面或合作研究感兴趣？" data-en="Interested in biosensing, material interfaces, or a research collaboration?">对生物传感、材料界面或合作研究感兴趣？</p><a href="mailto:rui.mo@tum.de"><span data-zh="写信给我" data-en="Send me a note">写信给我</span> ↗</a></div>
+    <div class="foot"><p>© 2026 Rui Mo · Munich, Germany</p><div><a href="https://orcid.org/0000-0002-1957-9679">ORCID</a><a href="https://scholar.google.com/citations?user=wvKh4P8AAAAJ&hl=zh-CN">Google Scholar</a><a href="tel:+4917641602949">+49 176 4160 2949</a></div><a href="#top"><span data-zh="回到顶部" data-en="Back to top">回到顶部</span> ↑</a></div>
+  </footer>
+
+  <script>
+    const button=document.querySelector(".lang"),zhLabel=document.getElementById("zhLabel"),enLabel=document.getElementById("enLabel");
+    let lang="zh";
+    button.addEventListener("click",()=>{lang=lang==="zh"?"en":"zh";document.documentElement.lang=lang==="zh"?"zh-CN":"en";document.querySelectorAll("[data-zh]").forEach(el=>el.textContent=el.dataset[lang]);zhLabel.tagName;zhLabel.style.fontWeight=lang==="zh"?"700":"400";zhLabel.style.color=lang==="zh"?"#102a4c":"#98a3b2";enLabel.style.fontWeight=lang==="en"?"700":"400";enLabel.style.color=lang==="en"?"#102a4c":"#98a3b2"});
+  </script>
+</body>
+</html>
