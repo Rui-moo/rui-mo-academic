@@ -27,7 +27,7 @@
     .meta{position:absolute;left:0;bottom:18px;display:flex;gap:18px;color:#8491a2;font-size:9px;letter-spacing:.07em;text-transform:uppercase}.meta span+span:before{content:"·";margin-right:18px}
     .section{width:min(1140px,calc(100% - 48px));margin:auto;padding:94px 0;display:grid;grid-template-columns:145px minmax(0,1fr);gap:54px;border-bottom:1px solid var(--line)}
     .label{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.label b{margin-right:13px;color:var(--navy)}
-    .about-section{padding-top:86px;padding-bottom:86px}.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:78px;align-items:start}.about-grid h2{margin:0;max-width:520px;white-space:pre-line;color:var(--navy);font-size:clamp(31px,3.2vw,45px);line-height:1.22;letter-spacing:-.035em;font-weight:550}.about-copy>p{margin:0;color:var(--muted);font-size:14px;line-height:1.9}.about-copy>p+p{margin-top:18px}.about-facts{margin:34px 0 0;padding:0;border-top:1px solid var(--line)}.about-facts div{display:grid;grid-template-columns:82px 1fr;gap:18px;padding:13px 0;border-bottom:1px solid var(--line)}.about-facts dt{color:#8491a2;font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.about-facts dd{margin:0;color:var(--navy);font-size:12px}
+    .about-section{padding-top:86px;padding-bottom:86px}.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:78px;align-items:start}.about-grid h2{margin:0;max-width:520px;white-space:pre-line;color:var(--navy);font-size:clamp(31px,3.2vw,45px);line-height:1.22;letter-spacing:-.035em;font-weight:550}.about-copy>p{margin:0;color:var(--muted);font-size:14px;line-height:1.9}.about-copy>p+p{margin-top:18px}.about-facts{margin:34px 0 0;padding:0;border-top:1px solid var(--line)}.about-facts div{display:grid;grid-template-columns:82px 1fr;gap:18px;padding:13px 0;border-bottom:1px solid var(--line)}.about-facts dt{color:#8491a2;font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}.about-facts dd{margin:0;color:var(--navy);font-size:12px}.profile-links{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}.profile-links a{display:inline-flex;align-items:center;gap:9px;min-height:38px;padding:5px 12px 5px 6px;border:1px solid var(--line);border-radius:4px;background:var(--white);color:var(--navy);font-size:11px;font-weight:700;transition:border-color .2s ease,background .2s ease,color .2s ease}.profile-links a:hover,.profile-links a:focus-visible{border-color:var(--navy);background:var(--navy);color:var(--white)}.profile-mark{width:26px;height:26px;display:grid;place-items:center;border-radius:3px;background:var(--navy);color:var(--white);font-size:12px;font-weight:800;line-height:1}.profile-mark--orcid{background:#a6ce39}.profile-mark--linkedin{background:#0a66c2}.profile-links a:hover .profile-mark,.profile-links a:focus-visible .profile-mark{outline:1px solid rgba(255,255,255,.55)}
     .section-head{display:grid;grid-template-columns:1.45fr 1fr;gap:64px;align-items:end;margin-bottom:48px}.section-head h2{margin:0;color:var(--navy);font-size:clamp(32px,3.5vw,48px);line-height:1.2;letter-spacing:-.035em;font-weight:550}.section-head p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}
     .research{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{min-height:280px;padding:24px 22px;border:1px solid var(--line);border-top:3px solid var(--navy);display:flex;flex-direction:column}
     .card em{width:28px;height:28px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;color:var(--navy);font-size:10px;font-style:normal}.card h3{margin:33px 0 14px;color:var(--navy);font-size:19px;line-height:1.35}.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.75}.card small{margin-top:auto;padding-top:23px;color:#8090a3;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
@@ -92,6 +92,11 @@
             <div><dt data-zh="学位" data-en="Degree">学位</dt><dd>MSc @ TUM</dd></div>
             <div><dt data-zh="方向" data-en="Focus">方向</dt><dd>Biosensors · Hydrogels · Interfaces</dd></div>
           </dl>
+          <nav class="profile-links" aria-label="Academic and social profiles">
+            <a href="https://scholar.google.com/citations?user=wvKh4P8AAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer" aria-label="Google Scholar" title="Google Scholar"><span class="profile-mark profile-mark--scholar" aria-hidden="true">G</span><span>Google Scholar</span></a>
+            <a href="https://orcid.org/0000-0002-4114-6167" target="_blank" rel="noreferrer" aria-label="ORCID" title="ORCID"><span class="profile-mark profile-mark--orcid" aria-hidden="true">iD</span><span>ORCID</span></a>
+            <a href="https://www.linkedin.com/in/ruimoo" target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><span class="profile-mark profile-mark--linkedin" aria-hidden="true">in</span><span>LinkedIn</span></a>
+          </nav>
         </div>
       </div>
     </section>
@@ -164,7 +169,7 @@
 
   <footer>
     <div class="cta"><p data-zh="对生物传感、材料界面或合作研究感兴趣？" data-en="Interested in biosensing, material interfaces, or a research collaboration?">对生物传感、材料界面或合作研究感兴趣？</p><a href="mailto:rui.mo@tum.de"><span data-zh="写信给我" data-en="Send me a note">写信给我</span> ↗</a></div>
-    <div class="foot"><p>© 2026 Rui Mo · Munich, Germany</p><div><a href="https://orcid.org/0000-0002-1957-9679">ORCID</a><a href="https://scholar.google.com/citations?user=wvKh4P8AAAAJ&hl=zh-CN">Google Scholar</a></div><a href="#top"><span data-zh="回到顶部" data-en="Back to top">回到顶部</span> ↑</a></div>
+    <div class="foot"><p>© 2026 Rui Mo · Munich, Germany</p><div><a href="https://orcid.org/0000-0002-4114-6167">ORCID</a><a href="https://scholar.google.com/citations?user=wvKh4P8AAAAJ&hl=zh-CN">Google Scholar</a></div><a href="#top"><span data-zh="回到顶部" data-en="Back to top">回到顶部</span> ↑</a></div>
   </footer>
 
   <script>
