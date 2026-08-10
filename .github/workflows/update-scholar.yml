@@ -1,0 +1,88 @@
+name: Update Google Scholar metrics
+
+on:
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-google-scholar
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Fetch Google Scholar metrics
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { writeFile } from "node:fs/promises";
+
+          const apiKey = process.env.SERPAPI_KEY;
+          if (!apiKey) throw new Error("Missing SERPAPI_KEY repository secret.");
+
+          const endpoint = new URL("https://serpapi.com/search.json");
+          endpoint.searchParams.set("engine", "google_scholar_author");
+          endpoint.searchParams.set("author_id", "wvKh4P8AAAAJ");
+          endpoint.searchParams.set("hl", "en");
+          endpoint.searchParams.set("api_key", apiKey);
+          endpoint.searchParams.set("no_cache", "true");
+
+          const response = await fetch(endpoint);
+          const payload = await response.json();
+          if (!response.ok || payload.error) {
+            throw new Error(payload.error || `SerpApi request failed with HTTP ${response.status}`);
+          }
+
+          const table = payload.cited_by?.table ?? [];
+          const allValue = (key) => table.find((row) => row[key])?.[key]?.all;
+          const citations = Number(allValue("citations"));
+          const hIndex = Number(allValue("h_index"));
+          const i10Index = Number(allValue("i10_index"));
+          const yearly = (payload.cited_by?.graph ?? [])
+            .slice(-4)
+            .map(({ year, citations: count }) => ({
+              year: String(year),
+              citations: Number(count),
+            }));
+
+          if (
+            !Number.isFinite(citations) ||
+            !Number.isFinite(hIndex) ||
+            !Number.isFinite(i10Index) ||
+            yearly.length === 0 ||
+            yearly.some((item) => !/^\d{4}$/.test(item.year) || !Number.isFinite(item.citations))
+          ) {
+            throw new Error("SerpApi returned incomplete Google Scholar metrics.");
+          }
+
+          const data = {
+            citations,
+            hIndex,
+            i10Index,
+            updated: new Date().toISOString().slice(0, 10),
+            yearly,
+          };
+
+          await writeFile("scholar-data.json", JSON.stringify(data, null, 2) + "\n");
+          NODE
+
+      - name: Publish refreshed metrics
+        run: |
+          if git diff --quiet -- scholar-data.json; then
+            echo "Google Scholar metrics are already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scholar-data.json
+          git commit -m "Update Google Scholar metrics"
+          git push
