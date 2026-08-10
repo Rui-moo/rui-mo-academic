@@ -232,6 +232,28 @@
     function setResearchPanel(panel){researchPanel=researchPanel===panel?null:panel;researchCards.forEach(card=>{const active=card.dataset.researchPanel===researchPanel;card.classList.toggle("is-active",active);card.setAttribute("aria-expanded",String(active));card.querySelector(".research-card-arrow").textContent=active?"↑":"↓"});researchDetail.hidden=!researchPanel;researchPanels.forEach(el=>el.hidden=el.dataset.detailPanel!==researchPanel);researchTitles.forEach(el=>el.hidden=el.dataset.detailTitle!==researchPanel)}
     researchCards.forEach(card=>card.addEventListener("click",()=>setResearchPanel(card.dataset.researchPanel)));
     researchClose.addEventListener("click",()=>setResearchPanel(researchPanel));
+    function scholarNumber(value){const parsed=Number(value);return Number.isFinite(parsed)?parsed:null}
+    async function refreshScholarMetrics(){
+      try{
+        const response=await fetch(`./scholar-data.json?v=${Date.now()}`,{cache:"no-store"});
+        if(!response.ok)throw new Error("Scholar metrics unavailable");
+        const data=await response.json();
+        const citations=scholarNumber(data.citations),hIndex=scholarNumber(data.hIndex),i10Index=scholarNumber(data.i10Index);
+        const yearly=(Array.isArray(data.yearly)?data.yearly:[]).filter(item=>/^\d{4}$/.test(String(item.year))&&scholarNumber(item.citations)!==null).slice(-4).map(item=>({year:String(item.year),citations:Number(item.citations)}));
+        if(citations===null||hIndex===null||i10Index===null||yearly.length===0)return;
+        const metricValues=document.querySelectorAll(".citation-metrics strong");
+        if(metricValues.length>=3){metricValues[0].textContent=String(citations);metricValues[1].textContent=String(hIndex);metricValues[2].textContent=String(i10Index)}
+        const maximum=Math.max(1,...yearly.map(item=>item.citations));
+        const chart=document.querySelector(".citation-chart");
+        if(chart){
+          chart.innerHTML=yearly.map(item=>`<div class="citation-year"><span class="citation-value">${item.citations}</span><span class="citation-bar-track"><i style="height:${Math.max(4,item.citations/maximum*100).toFixed(1)}%"></i></span><span class="citation-year-label">${item.year}</span></div>`).join("");
+          chart.setAttribute("aria-label",`Citations per year: ${yearly.map(item=>`${item.year} ${item.citations}`).join(", ")}`);
+        }
+        const source=document.querySelector(".citation-source"),updated=String(data.updated||"");
+        if(source&&updated){const zhText=`数据来源：Google Scholar · 更新于 ${updated}`,enText=`Source: Google Scholar · Updated ${updated}`;source.dataset.zh=zhText;source.dataset.en=enText;source.textContent=lang==="zh"?zhText:enText}
+      }catch(error){}
+    }
+    refreshScholarMetrics();
   </script>
 </body>
 </html>
