@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: update-google-scholar
@@ -17,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out website
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Fetch Google Scholar metrics
         env:
@@ -76,8 +77,10 @@ jobs:
           NODE
 
       - name: Publish refreshed metrics
+        id: publish
         run: |
           if git diff --quiet -- scholar-data.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "Google Scholar metrics are already current."
             exit 0
           fi
@@ -86,3 +89,10 @@ jobs:
           git add scholar-data.json
           git commit -m "Update Google Scholar metrics"
           git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy refreshed website
+        if: steps.publish.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
