@@ -89,8 +89,8 @@
     @media(max-width:660px){.foot div{display:flex;grid-column:1/-1;grid-row:2}.foot div a:not(.footer-email){display:none}}
     @media(min-width:901px){#experience{grid-template-columns:200px minmax(0,1fr);gap:25px}#experience>.label{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:13px;white-space:normal;line-height:1.55}#experience>.label b{margin-right:0}}
     @media(min-width:901px){
-      .research-section{min-height:auto;padding-top:44px;padding-bottom:58px}
-      .research{position:relative;display:block;height:610px;overflow:hidden;background:transparent;isolation:isolate}
+      .research-section{width:min(1400px,calc(100% - 32px));grid-template-columns:100px minmax(0,1fr);gap:32px;min-height:auto;padding-top:44px;padding-bottom:48px}
+      .research{position:relative;display:block;height:650px;overflow:hidden;background:transparent;isolation:isolate}
       .research-card-button{position:absolute!important;width:auto!important;height:auto!important;margin:0!important;min-height:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;filter:none;overflow:visible!important;transition:filter .2s ease!important}
       .research-card-button:after{content:"";position:absolute;inset:0;z-index:0;background:#edf3f8;filter:drop-shadow(0 0 1.2px #4b7fb7);pointer-events:none}
       .research-card-button .research-card-main,.research-card-button .research-card-meta{position:relative;z-index:1}
@@ -123,7 +123,7 @@
       .research-card-button[data-research-panel="hydrogel"] .research-card-action{font-size:10px!important}
     }
     @media(min-width:901px){
-      .research{height:620px;overflow:visible}
+      .research{height:660px;overflow:visible}
       .research-spiral-bg{position:absolute;inset:0;z-index:0;display:block;width:100%;height:100%;overflow:visible;pointer-events:none}
       .research-spiral-bg .region{stroke:#fff;stroke-width:2}
       .research-spiral-bg .cellulose{fill:#b8cbd9}.research-spiral-bg .membranes{fill:#d0dde6}.research-spiral-bg .biosensing{fill:#e3ebf0}.research-spiral-bg .hydrogel{fill:#f4f7f9}
@@ -153,10 +153,10 @@
       .research-card-button[data-research-panel="membranes"]{left:62%!important;top:0!important;width:38%!important;height:61.5%!important;padding:104px 70px 25px 35px!important;clip-path:none!important}
       .research-card-button[data-research-panel="biosensing"]{left:76%!important;top:61.5%!important;width:24%!important;height:38.5%!important;padding:55px 18px 15px 28px!important;clip-path:none!important}
       .research-card-button[data-research-panel="hydrogel"]{left:62%!important;top:61.5%!important;width:14%!important;height:38.5%!important;padding:45px 10px 10px 16px!important;clip-path:none!important}
-      .research-card-button[data-research-panel="cellulose"] h3{font-size:22px!important}
-      .research-card-button[data-research-panel="membranes"] h3{font-size:20px!important}
-      .research-card-button[data-research-panel="biosensing"] h3{font-size:18px!important;line-height:1.28!important}
-      .research-card-button[data-research-panel="hydrogel"] h3{font-size:14px!important;line-height:1.25!important}
+      .research-card-button[data-research-panel="cellulose"] h3{font-size:23px!important}
+      .research-card-button[data-research-panel="membranes"] h3{font-size:21px!important}
+      .research-card-button[data-research-panel="biosensing"] h3{font-size:19px!important;line-height:1.28!important}
+      .research-card-button[data-research-panel="hydrogel"] h3{font-size:15px!important;line-height:1.25!important}
       .research-card-button[data-research-panel="biosensing"] p,.research-card-button[data-research-panel="biosensing"] .research-card-meta,.research-card-button[data-research-panel="hydrogel"] p,.research-card-button[data-research-panel="hydrogel"] .research-card-meta{display:none!important}
       .research-card-button[data-research-panel="cellulose"] .research-card-meta,.research-card-button[data-research-panel="membranes"] .research-card-meta{margin-top:20px!important}
       .research-card-button[data-research-panel="membranes"] .research-card-main,.research-card-button[data-research-panel="membranes"] .research-card-meta{max-width:285px!important}
