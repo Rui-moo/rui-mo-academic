@@ -88,6 +88,63 @@
     @media(max-width:660px){.pub{margin-inline:-8px;padding-inline:8px}.skill{padding:21px 0}.research-project{padding:21px}}
     @media(max-width:660px){.foot div{display:flex;grid-column:1/-1;grid-row:2}.foot div a:not(.footer-email){display:none}}
     @media(min-width:901px){#experience{grid-template-columns:200px minmax(0,1fr);gap:25px}#experience>.label{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:13px;white-space:normal;line-height:1.55}#experience>.label b{margin-right:0}}
+    @media(min-width:901px){
+      .research-section{min-height:auto;padding-top:44px;padding-bottom:58px}
+      .research{position:relative;display:block;height:610px;overflow:hidden;background:transparent;isolation:isolate}
+      .research-card-button{position:absolute!important;width:auto!important;height:auto!important;margin:0!important;min-height:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;filter:none;overflow:visible!important;transition:filter .2s ease!important}
+      .research-card-button:after{content:"";position:absolute;inset:0;z-index:0;background:#edf3f8;filter:drop-shadow(0 0 1.2px #4b7fb7);pointer-events:none}
+      .research-card-button .research-card-main,.research-card-button .research-card-meta{position:relative;z-index:1}
+      .research-card-button:hover,.research-card-button:focus-visible{transform:none!important;filter:drop-shadow(0 8px 16px rgba(22,55,91,.11));outline:none!important}
+      .research-card-button.is-active{transform:none!important;filter:drop-shadow(0 0 2px #174f89)}
+      .research-card-button[data-research-panel="cellulose"]{inset:0 38.2% 0 0!important;padding:330px 48px 35px 270px!important}
+      .research-card-button[data-research-panel="cellulose"]:after{background:#d5e6f3;clip-path:ellipse(100% 100% at 100% 100%)}
+      .research-card-button[data-research-panel="membranes"]{inset:0 0 38.2% 61.8%!important;padding:126px 34px 28px 54px!important}
+      .research-card-button[data-research-panel="membranes"]:after{background:#e2edf5;clip-path:ellipse(100% 100% at 0 100%)}
+      .research-card-button[data-research-panel="biosensing"]{inset:61.8% 0 0 76.4%!important;padding:58px 18px 20px 46px!important}
+      .research-card-button[data-research-panel="biosensing"]:after{background:#edf3f8;clip-path:ellipse(100% 100% at 0 0)}
+      .research-card-button[data-research-panel="hydrogel"]{inset:76.4% 23.6% 0 61.8%!important;padding:30px 10px 10px 28px!important}
+      .research-card-button[data-research-panel="hydrogel"]:after{background:#f7f9fc;clip-path:ellipse(100% 100% at 100% 0)}
+      .research-card-button .research-card-main,.research-card-button[data-research-panel="cellulose"] .research-card-main{padding:0!important;margin:0!important;display:block!important}
+      .research-card-button h3,.research-card-button[data-research-panel="cellulose"] h3{font-size:clamp(18px,1.45vw,22px)!important;line-height:1.25!important}
+      .research-card-button p{margin-top:10px!important;font-size:14px!important;line-height:1.55!important}
+      .research-card-button .research-card-meta{position:static!important;display:grid!important;grid-template-columns:1fr!important;gap:12px!important;margin-top:18px!important;padding:0!important}
+      .research-card-button .research-card-meta small{font-size:10px!important;line-height:1.5!important;white-space:normal!important}
+      .research-card-button .research-card-action{justify-self:start!important;font-size:12px!important}
+      .research-card-button[data-research-panel="cellulose"] .research-card-main{max-width:470px}
+      .research-card-button[data-research-panel="cellulose"] .research-card-meta{max-width:470px}
+      .research-card-button[data-research-panel="membranes"] .research-card-main{max-width:360px}
+      .research-card-button[data-research-panel="biosensing"] h3{font-size:15px!important}
+      .research-card-button[data-research-panel="biosensing"] p,.research-card-button[data-research-panel="biosensing"] .research-card-meta small{display:none!important}
+      .research-card-button[data-research-panel="biosensing"] .research-card-meta{margin-top:12px!important;gap:8px!important}
+      .research-card-button[data-research-panel="hydrogel"] h3{font-size:11px!important;line-height:1.2!important}
+      .research-card-button[data-research-panel="hydrogel"] p{display:none!important}
+      .research-card-button[data-research-panel="hydrogel"] .research-card-meta{margin-top:8px!important;gap:5px!important}
+      .research-card-button[data-research-panel="hydrogel"] .research-card-meta small{display:none}
+      .research-card-button[data-research-panel="hydrogel"] .research-card-action{font-size:10px!important}
+    }
+    @media(min-width:901px){
+      .research{height:620px;overflow:visible}
+      .research-spiral-bg{position:absolute;inset:0;z-index:0;display:block;width:100%;height:100%;overflow:visible;pointer-events:none}
+      .research-spiral-bg .region{stroke:#fff;stroke-width:2}
+      .research-spiral-bg .cellulose{fill:#d3e3f2}.research-spiral-bg .membranes{fill:#e0ebf6}.research-spiral-bg .biosensing{fill:#ecf3f9}.research-spiral-bg .hydrogel{fill:#f5f8fc}
+      .research-spiral-bg .spiral-line{fill:none;stroke:#3f73b8;stroke-width:2;vector-effect:non-scaling-stroke}
+      .research-card-button,.research-card-button[data-research-panel]{inset:auto!important;width:auto!important;height:auto!important;min-height:0!important;padding:0!important;background:transparent!important;clip-path:none!important;filter:none!important;overflow:visible!important;z-index:2}
+      .research-card-button:after{content:none!important}
+      .research-card-button:hover,.research-card-button:focus-visible{background:rgba(255,255,255,.18)!important;box-shadow:none!important;filter:none!important}
+      .research-card-button .research-card-main,.research-card-button .research-card-meta{max-width:none!important}
+      .research-card-button[data-research-panel="cellulose"]{left:14%!important;top:42%!important;width:39%!important;height:45%!important}
+      .research-card-button[data-research-panel="membranes"]{left:64%!important;top:12%!important;width:30%!important;height:45%!important}
+      .research-card-button[data-research-panel="biosensing"]{left:77%!important;top:63%!important;width:21%!important;height:33%!important}
+      .research-card-button[data-research-panel="hydrogel"]{left:63%!important;top:64%!important;width:13%!important;height:34%!important}
+      .research-card-button h3,.research-card-button[data-research-panel="cellulose"] h3{font-size:20px!important;line-height:1.28!important;overflow-wrap:anywhere}
+      .research-card-button p{display:block!important;margin-top:12px!important;font-size:14px!important;line-height:1.55!important}
+      .research-card-button .research-card-meta{display:grid!important;grid-template-columns:1fr!important;gap:15px!important;margin-top:22px!important;padding:0!important}
+      .research-card-button .research-card-meta small{display:block!important;font-size:10px!important;line-height:1.55!important;white-space:normal!important}
+      .research-card-button .research-card-action{justify-self:start!important;font-size:12px!important}
+      .research-card-button[data-research-panel="biosensing"] h3{font-size:17px!important}.research-card-button[data-research-panel="biosensing"] p{font-size:11px!important;line-height:1.5!important}.research-card-button[data-research-panel="biosensing"] .research-card-meta{gap:9px!important;margin-top:14px!important}.research-card-button[data-research-panel="biosensing"] .research-card-meta small{font-size:8px!important}
+      .research-card-button[data-research-panel="hydrogel"] h3{font-size:12px!important;line-height:1.28!important}.research-card-button[data-research-panel="hydrogel"] p{display:-webkit-box!important;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;margin-top:8px!important;font-size:8px!important;line-height:1.4!important}.research-card-button[data-research-panel="hydrogel"] .research-card-meta{gap:6px!important;margin-top:8px!important}.research-card-button[data-research-panel="hydrogel"] .research-card-meta small{font-size:6px!important;line-height:1.4!important}.research-card-button[data-research-panel="hydrogel"] .research-card-action{font-size:9px!important}
+    }
+    @media(max-width:900px){.research-spiral-bg{display:none}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.research-card-button:hover,.research-card-button:focus-visible,.pub:hover .go,.pub:focus-visible .go,.photo:hover img{transform:none}}
   </style>
 </head>
@@ -154,6 +211,13 @@
           <p data-zh="我的研究连接生物材料、电化学传感、分子传输与可持续功能材料。" data-en="My research connects biomaterials, electrochemical sensing, molecular transport, and sustainable functional materials.">我的研究连接生物材料、电化学传感、分子传输与可持续功能材料。</p>
         </div>
         <div class="research">
+          <svg class="research-spiral-bg" viewBox="0 0 1000 620" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path class="region cellulose" d="M0 620 A620 620 0 0 1 620 0 L620 620 Z"/>
+            <path class="region membranes" d="M620 0 A380 380 0 0 1 1000 380 L620 380 Z"/>
+            <path class="region biosensing" d="M1000 380 A240 240 0 0 1 760 620 L760 380 Z"/>
+            <path class="region hydrogel" d="M760 620 L620 620 L620 380 A140 140 0 0 1 760 520 Z"/>
+            <path class="spiral-line" d="M0 620 A620 620 0 0 1 620 0 A380 380 0 0 1 1000 380 A240 240 0 0 1 760 620 A140 140 0 0 1 620 480 A86 86 0 0 1 706 394"/>
+          </svg>
           <button class="card research-card-button" type="button" data-research-panel="biosensing" aria-expanded="false" aria-controls="researchDetail"><div class="research-card-main"><h3 data-zh="植入式电化学生物传感" data-en="Implantable Electrochemical Biosensing">植入式电化学生物传感</h3><p data-zh="研究植入式金电极的传感响应与长期稳定性，面向生理环境中的连续生物标志物监测。" data-en="Studying sensing responses and long-term stability of implantable gold electrodes for continuous biomarker monitoring in physiological environments.">研究植入式金电极的传感响应与长期稳定性，面向生理环境中的连续生物标志物监测。</p></div><div class="research-card-meta"><small>Gold electrodes · CV · EIS · Aptamers</small><span class="research-card-action"><span data-zh="查看项目" data-en="View projects">查看项目</span><span class="research-card-arrow" aria-hidden="true">→</span></span></div></button>
           <button class="card research-card-button" type="button" data-research-panel="hydrogel" aria-expanded="false" aria-controls="researchDetail"><div class="research-card-main"><h3 data-zh="功能水凝胶与生物界面" data-en="Functional Hydrogels & Bio-interfaces">功能水凝胶与生物界面</h3><p data-zh="调控保护涂层的组成、厚度与界面黏附，平衡分子扩散、抗污染能力和传感响应。" data-en="Tuning protective-coating composition, thickness, and adhesion to balance molecular diffusion, biofouling resistance, and sensing response.">调控保护涂层的组成、厚度与界面黏附，平衡分子扩散、抗污染能力和传感响应。</p></div><div class="research-card-meta"><small>Hydrogels · Diffusion · Biofouling</small><span class="research-card-action"><span data-zh="查看项目" data-en="View projects">查看项目</span><span class="research-card-arrow" aria-hidden="true">→</span></span></div></button>
           <button class="card research-card-button" type="button" data-research-panel="cellulose" aria-expanded="false" aria-controls="researchDetail"><div class="research-card-main"><h3 data-zh="多孔纤维素泡沫" data-en="Porous Cellulose Foams">多孔纤维素泡沫</h3><p data-zh="通过调控配方、凝胶化与干燥过程开发轻质纤维素多孔材料，以调节孔结构、尺寸稳定性和功能性能。" data-en="Developing lightweight cellulose porous materials by controlling formulation, gelation, and drying processes to tune pore structure, dimensional stability, and functional performance.">通过调控配方、凝胶化与干燥过程开发轻质纤维素多孔材料，以调节孔结构、尺寸稳定性和功能性能。</p></div><div class="research-card-meta"><small>Cellulose · Internal gelation · Porous materials</small><span class="research-card-action"><span data-zh="查看项目" data-en="View projects">查看项目</span><span class="research-card-arrow" aria-hidden="true">→</span></span></div></button>
