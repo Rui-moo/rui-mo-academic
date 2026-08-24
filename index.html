@@ -68,8 +68,9 @@
     @media(min-width:661px){.about-section,.pub-section,.alternate-section{padding-inline:max(24px,calc((100% - var(--content-max))/2))}}
     footer{padding-inline:max(24px,calc((100% - var(--content-max))/2))}
     @media(min-width:901px){
-      #skills{min-height:calc(100vh - 76px);min-height:calc(100svh - 76px)}
+      #about,#skills{min-height:calc(100vh - 76px);min-height:calc(100svh - 76px)}
     }
+    @media(min-width:901px) and (min-height:851px){#about{padding-top:30px;padding-bottom:28px}}
   </style>
   <style id="photo-lightbox-styles">
     .photo img{cursor:zoom-in}.photo img:focus-visible{outline:3px solid var(--navy);outline-offset:-3px}
