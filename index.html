@@ -228,6 +228,41 @@
     @media(min-width:901px){
       .about-copy .citation-chart{gap:12px;padding:0 4px 6px 2px}
       .about-copy .citation-year-label{line-height:1.2}
+      #research,#publications,#experience,#skills,#photography{min-height:calc(100vh - 76px);min-height:calc(100svh - 76px);padding-top:30px;padding-bottom:28px}
+    }
+    @media(min-width:901px) and (max-height:900px){
+      #publications .pub-title{margin-bottom:14px}
+      #publications .pub{padding-top:4px;padding-bottom:4px}
+      #publications .pub h3{max-width:none;margin-top:3px;margin-bottom:2px;line-height:1.25}
+      #publications .authors{line-height:1.35}
+      #publications .volume{line-height:1.35}
+      #experience .two-col h2{margin-bottom:20px}
+      #experience .item{padding:14px 0}
+    }
+    @media(min-width:901px) and (max-height:850px){
+      #photography .photo-grid{height:calc(100svh - 305px)}
+    }
+    @media(min-width:1201px) and (max-height:850px){
+      #research .research{height:calc(100svh - 255px)}
+    }
+    @media(min-width:1201px) and (min-height:851px) and (max-height:900px){
+      #research .research{height:calc(100svh - 276px)}
+    }
+    @media(min-width:901px) and (max-height:720px){
+      #research .section-head{margin-bottom:10px}
+      #research .research{
+        height:465px!important;
+        grid-template-rows:repeat(2,minmax(0,1fr))!important;
+        grid-auto-rows:unset!important
+      }
+      #research .research-card-button,#research .research-card-button[data-research-panel]{min-height:0!important;padding:14px!important}
+      #research .research-card-button[data-research-panel]{
+        grid-row:auto!important;
+        grid-column:auto!important;
+        height:auto!important
+      }
+      #research .research-card-button p{line-height:1.45!important}
+      #research .research-card-button .research-card-meta{padding-top:8px!important}
     }
   </style>
 </head>
