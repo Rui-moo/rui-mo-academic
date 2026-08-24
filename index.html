@@ -185,14 +185,18 @@
       .research-card-button[data-research-panel="biosensing"]{padding:clamp(38px,7vh,48px) 16px 12px 24px!important}
       .research-card-button[data-research-panel="hydrogel"]{padding:clamp(38px,7vh,48px) 7px 9px 18px!important}
     }
-    @media(min-width:901px) and (max-width:1100px) and (max-height:850px){
+    @media(min-width:901px) and (max-width:1200px) and (max-height:850px){
       .section{grid-template-columns:minmax(0,1fr);gap:16px}
       .section>.label{margin-bottom:0;white-space:normal}
       .about-grid{grid-template-columns:minmax(0,1fr) 300px;column-gap:28px}
       .about-visual{width:300px!important}
       #experience{grid-template-columns:minmax(0,1fr);gap:16px}
     }
-    @media (min-width:901px) and (max-width:1100px), (min-width:901px) and (max-height:720px){
+    @media(min-width:901px) and (orientation:landscape) and (hover:none) and (pointer:coarse){
+      .section,#experience{grid-template-columns:minmax(0,1fr);gap:16px}
+      .section>.label{margin-bottom:0;white-space:normal}
+    }
+    @media (min-width:901px) and (max-width:1200px), (min-width:901px) and (max-height:720px), (min-width:901px) and (orientation:landscape) and (hover:none) and (pointer:coarse){
       .research-section{width:min(1040px,calc(100% - 40px));min-height:auto;padding-top:42px;padding-bottom:58px;grid-template-columns:90px minmax(0,1fr);gap:28px}
       .research-section .section-head{margin-bottom:22px}
       .research{width:100%!important;height:auto!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-auto-rows:auto!important;gap:14px!important;overflow:visible!important}
@@ -206,7 +210,7 @@
       .research-card-button .research-card-meta,.research-card-button[data-research-panel="cellulose"] .research-card-meta,.research-card-button[data-research-panel="membranes"] .research-card-meta,.research-card-button[data-research-panel="biosensing"] .research-card-meta,.research-card-button[data-research-panel="hydrogel"] .research-card-meta{position:relative!important;right:auto!important;bottom:auto!important;left:auto!important;display:grid!important;grid-template-columns:minmax(0,1fr)!important;margin-top:auto!important;padding-top:18px!important;gap:8px!important}
       .research-card-button .research-card-meta small,.research-card-button[data-research-panel="biosensing"] .research-card-meta small,.research-card-button[data-research-panel="hydrogel"] .research-card-meta small{display:block!important;font-size:10px!important;line-height:1.5!important;white-space:normal!important}
     }
-    @media(min-width:901px) and (max-width:1100px){
+    @media(min-width:901px) and (max-width:1200px), (min-width:901px) and (orientation:landscape) and (hover:none) and (pointer:coarse){
       .research-section{grid-template-columns:minmax(0,1fr);gap:16px}
       .research-section>.label{margin-bottom:0;white-space:normal}
     }
